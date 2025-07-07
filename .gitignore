@@ -12,3 +12,11 @@ docs/
 
 # Dotenv file
 .env
+.osmium/
+.wake/
+lib/
+.vscode/
+**/.wake/
+**/.osmium/
+**/lib/
+**/.vscode/
