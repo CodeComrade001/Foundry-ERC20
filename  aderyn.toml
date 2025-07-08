@@ -1,0 +1,9 @@
+version = 1
+
+root = "."
+
+include = ["src/"]
+exclude = ["src/others/", "/test/"]
+
+[env]
+FOUNDRY_PROFILE = "ccip"
