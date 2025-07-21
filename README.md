@@ -1,13 +1,56 @@
-## Foundry
+# 🪙 Foundry-ERC20
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A lightweight ERC20-style token implementation using [Foundry](https://book.getfoundry.sh/). This token supports minting, burning, transferring, approving, and allowance-based transactions. Built without OpenZeppelin to help understand the mechanics of ERC20 from scratch.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 🚀 Features
+
+- ✅ Mint on deploy (constructor initializes total supply)
+- ✅ Basic transfers
+- ✅ `approve` / `transferFrom` mechanism
+- ✅ `approveAndCall` external interaction
+- ✅ Burn tokens (`burn`, `burnFrom`)
+- ✅ Events: `Transfer`, `Approval`, `Burn`
+
+---
+
+## 🧠 Smart Contract Properties
+
+Based on the Solidity implementation:
+
+| Property          | Type       | Description                                    |
+|------------------|------------|------------------------------------------------|
+| `name`           | `string`   | Token name (set in constructor)               |
+| `symbol`         | `string`   | Token symbol (set in constructor)             |
+| `decimals`       | `uint8`    | Always 18 — standard ERC20 format             |
+| `totalSupply`    | `uint256`  | Total supply of tokens                        |
+| `balanceOf`      | `mapping`  | Tracks balances of each address               |
+| `allowance`      | `mapping`  | Approved spending limits                      |
+
+### 🔁 Core Functions
+
+- `transfer(address to, uint256 value)`: Send tokens to another address.
+- `approve(address spender, uint256 value)`: Approve a spender to use your tokens.
+- `transferFrom(address from, address to, uint256 value)`: Transfer on behalf of another address.
+- `burn(uint256 value)`: Destroy your own tokens.
+- `burnFrom(address from, uint256 value)`: Destroy tokens from another address using allowance.
+- `approveAndCall(address spender, uint256 value, bytes calldata extraData)`: Approve and trigger callback on external contract.
+
+---
+
+## 🧰 Requirements
+
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+- [Node.js](https://nodejs.org/) (for tooling or integration)
+- A Solidity-compatible wallet for deployment or testing
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
 
 ## Documentation
 
