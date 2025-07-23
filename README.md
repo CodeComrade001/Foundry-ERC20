@@ -17,8 +17,6 @@ A lightweight ERC20-style token implementation using [Foundry](https://book.getf
 
 ## 🧠 Smart Contract Properties
 
-Based on the Solidity implementation:
-
 | Property          | Type       | Description                                    |
 |------------------|------------|------------------------------------------------|
 | `name`           | `string`   | Token name (set in constructor)               |
